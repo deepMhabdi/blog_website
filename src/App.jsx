@@ -4,7 +4,7 @@ import ContactUs from "./components/ContactUs";
 
 const App = () => {
   return (
-    <div>
+    <div className="font-family">
       <ContactUs />
       <Footer />
     </div>
