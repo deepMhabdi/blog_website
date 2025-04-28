@@ -1,8 +1,7 @@
 import React from "react";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const ContactUs = () => {
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -16,20 +15,19 @@ const ContactUs = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
       Swal.fire({
         title: "Success",
         text: "Message sent successfully",
-        icon: "success"
+        icon: "success",
       });
     }
   };
-
 
   return (
     <section className="py-12 px-6 ">
@@ -37,7 +35,9 @@ const ContactUs = () => {
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
         <div className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
           <div className="md:w-1/2 p-8">
-            <h3 className="text-xl font-semibold mb-4 text-center">Get in Touch</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center">
+              Get in Touch
+            </h3>
             <p className="text-gray-600 mb-6">
               Fill the form and we will get back to you soon!
             </p>
