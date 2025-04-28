@@ -71,7 +71,10 @@ const ContactUs = () => {
               </button>
             </form>
           </div>
-          <div className="md:w-1/2 bg-gray-200 p-8 flex flex-col justify-center">
+          <div className="md:w-1/2 bg-gray-200 p-8 flex flex-col justify-center text-center">
+          <h1>
+            
+          </h1>
             <p className="text-gray-700 mb-2">
               <strong>Address:</strong> 1234 Street Name, City, State
             </p>
