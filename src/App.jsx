@@ -1,13 +1,36 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
-import InsideBlog from "./components/InsideBlog";
+// import AboutUs from "./components/AboutUs"; // assuming you created it
+import LandingPage from "./components/LandingPage";  
+import BlogCards from "./components/BlogCards";
+import InsideBlog from "./components/BlogDetails"; 
 
 const App = () => {
   return (
     <div className="font-family">
-      <InsideBlog />
-      <ContactUs />
+      <Navbar />
+      
+      <Routes>
+        {/* Home route -> Only Landing Page */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* Blogs route */}
+        <Route path="/blogs" element={<BlogCards />} />
+        
+        {/* Blog detail */}
+        <Route path="/blogs/:id" element={<InsideBlog />} />
+
+        {/* About Us route */}
+        {/* <Route path="/about-us" element={<AboutUs />} /> */}
+
+        {/* Contact Us route */}
+        <Route path="/contact-us" element={<ContactUs />} />
+      </Routes>
+
       <Footer />
     </div>
   );

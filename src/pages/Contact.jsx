@@ -1,8 +1,5 @@
 import React from "react";
 import Swal from "sweetalert2";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const ContactUs = () => {
   const onSubmit = async (event) => {
@@ -34,13 +31,7 @@ const ContactUs = () => {
 
   return (
     <section className="py-12 px-6 ">
-      <motion.div
-        variants={fadeIn("down", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
-        className="max-w-4xl mx-auto"
-      >
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
         <div className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
           <div className="md:w-1/2 p-8">
@@ -81,7 +72,9 @@ const ContactUs = () => {
             </form>
           </div>
           <div className="md:w-1/2 bg-gray-200 p-8 flex flex-col justify-center text-center">
-            <h1></h1>
+          <h1>
+            
+          </h1>
             <p className="text-gray-700 mb-2">
               <strong>Address:</strong> 1234 Street Name, City, State
             </p>
@@ -93,7 +86,7 @@ const ContactUs = () => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

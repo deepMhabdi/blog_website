@@ -1,20 +1,27 @@
-import React, { useState } from 'react';
-import image from './banner.jpeg';
+import React, { useState } from "react";
+import image from "../assets/banner.jpeg";
 import { PiArrowBendUpRightLight } from "react-icons/pi";
-import BlogCards from './BlogCards';
-import { NavLink } from 'react-router-dom'
+import BlogCards from "./BlogCards";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import ContactUs from "./ContactUs";
 
 const Banner = () => {
   const [showNav, setShowNav] = useState(false);
 
-  const navItems = [
-    { path: "/blogs", link: "Blogs" }
-  ];
+  const navItems = [{ path: "/blogs", link: "Blogs" }];
 
   return (
     <>
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-7 mb-16 py-6 sm:py-6 md:py-8 lg:py-1">
-        <div className="overflow-hidden rounded-3xl">
+        <motion.div
+          variants={fadeIn("down", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="overflow-hidden rounded-3xl"
+        >
           <div className="relative">
             <img
               src={image}
@@ -32,14 +39,15 @@ const Banner = () => {
                 Advice from Untitled Founder, Frankie
               </h1>
               <p className="mb-7 max-w-5xl text-xs sm:text-xl md:text-2xl text-white/80 hidden sm:block">
-                Let's get one thing out of the way: you don't need a fancy Bachelor's Degree to get into Product
-                Design. We sat down with Frankie Selkirk to talk about gate-keeping in product design and how anyone
-                can get into this growing industry.
+                Let's get one thing out of the way: you don't need a fancy
+                Bachelor's Degree to get into Product Design. We sat down with
+                Frankie Selkirk to talk about gate-keeping in product design and
+                how anyone can get into this growing industry.
               </p>
             </div>
 
             <div className="absolute right-4 sm:right-6 md:right-8 top-1/2 flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-              <button onClick={() => setShowNav(prev => !prev)}>
+              <button onClick={() => setShowNav((prev) => !prev)}>
                 <PiArrowBendUpRightLight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
               </button>
             </div>
@@ -51,7 +59,11 @@ const Banner = () => {
                     <NavLink
                       to={path}
                       className={({ isActive, isPending }) =>
-                        isActive ? "font-bold underline" : isPending ? "opacity-50" : ""
+                        isActive
+                          ? "font-bold underline"
+                          : isPending
+                          ? "opacity-50"
+                          : ""
                       }
                     >
                       {link}
@@ -61,14 +73,23 @@ const Banner = () => {
               </ul>
             )}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="container mx-auto mb-7">
-        <h2 className="mb-5 text-3xl font-semibold px-10 text-left">Recent blog posts</h2>
+        <motion.h2
+          variants={fadeIn("down", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-5 text-3xl font-semibold px-10 text-left mt-10"
+        >
+          Recent blog posts
+        </motion.h2>
       </section>
 
       <BlogCards />
+      <ContactUs />
     </>
   );
 };

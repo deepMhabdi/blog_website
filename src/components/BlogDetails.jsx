@@ -1,6 +1,7 @@
 import React from "react";
 import nature from "../assets/nature.jpg";
 
+
 const InsideBlog = () => {
   return (
     <section className="min-h-screen w-screen flex flex-col items-center bg-gray-100 py-10">
@@ -33,6 +34,7 @@ const InsideBlog = () => {
           autem.
         </p>
       </div>
+  
     </section>
   );
 };

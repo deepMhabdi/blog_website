@@ -1,18 +1,26 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import {motion} from "framer-motion";
+import { fadeIn } from "../variants";
 
 const Footer = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <motion.div
+      variants={fadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.3 }}
+      className="px-4 md:px-8 lg:px-16 mt-16"
+    >
       <footer className="bg-gray-300 text-gray-800 py-12 rounded-t-xl shadow-md">
         <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:max-w-5xl">
           {/* About Section */}
           <div className="flex flex-col items-start">
             <h3 className="text-2xl font-semibold mb-4">ABOUT</h3>
             <p className="mb-6">
-              Welcome to Blogger, where we share tips, ideas, and
-              inspiration on daily news. Our goal is to bring fresh insights
-              and stories to readers around the world.
+              Welcome to Blogger, where we share tips, ideas, and inspiration on
+              daily news. Our goal is to bring fresh insights and stories to
+              readers around the world.
             </p>
             <form className="flex items-center w-full max-w-sm">
               <input
@@ -46,7 +54,7 @@ const Footer = () => {
           <div className="flex flex-col items-start pl-16">
             <h3 className="text-2xl font-semibold mb-4">EXPLORE</h3>
             <ul className="space-y-2">
-            <li>
+              <li>
                 <a
                   href="#"
                   className="hover:text-green-600 transition-colors duration-300"
@@ -116,7 +124,7 @@ const Footer = () => {
           © Copyright 2025 All Rights Reserved, Blogger
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
