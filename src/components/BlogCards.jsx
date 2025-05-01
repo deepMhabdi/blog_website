@@ -2,13 +2,13 @@ import React from "react";
 import Blogs from "./blogsData.json";
 import { Link, useNavigate } from "react-router-dom"; // ✅ Combine the imports
 import { FaUser } from "react-icons/fa";
-import Footer from "./Footer"; 
+import fertilityImage from "../assets/fertility.jpg";
 
 const BlogCards = () => {
   const navigate = useNavigate();
 
-  const handleClick = (id) => {
-    navigate(`/blogs/${id}`); // Navigate to the blog details page
+  const handleClick = (title) => {
+    navigate(`/blogs/${title}`); // Navigate to the blog details page
   };
 
   return (
@@ -28,7 +28,7 @@ const BlogCards = () => {
             </div>
             <h3
               className="mt-4 mb-2 font-bold hover:text-blue-600 cursor-pointer"
-              onClick={() => handleClick(blog.id)}
+              onClick={() => handleClick(blog.title)}
             >
               {blog.title}
             </h3>
@@ -42,7 +42,6 @@ const BlogCards = () => {
           </div>
         ))}
       </div>
-  
     </>
   );
 };

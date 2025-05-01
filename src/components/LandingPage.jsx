@@ -17,18 +17,12 @@ const Banner = () => {
   return (
     <>
       <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-7 mb-16 py-6 sm:py-6 md:py-8 lg:py-1">
-        <motion.div
-          variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="overflow-hidden rounded-3xl"
-        >
+      <div className="overflow-hidden rounded-3xl">
           <div className="relative">
             <img
               src={image}
               alt="Featured blog post"
-              className="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[750px] w-full object-cover"
+              className="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[675px] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8 lg:p-10 text-white">
@@ -41,11 +35,16 @@ const Banner = () => {
                 Advice from Untitled Founder, Frankie
               </h1>
               <p className="mb-7 max-w-5xl text-xs sm:text-xl md:text-2xl text-white/80 hidden sm:block">
-                Let's get one thing out of the way: you don't need a fancy
-                Bachelor's Degree to get into Product Design. We sat down with
-                Frankie Selkirk to talk about gate-keeping in product design and
-                how anyone can get into this growing industry.
+                Let's get one thing out of the way: you don't need a fancy Bachelor's Degree to get into Product
+                Design. We sat down with Frankie Selkirk to talk about gate-keeping in product design and how anyone
+                can get into this growing industry.
               </p>
+            </div>
+
+            <div className="absolute right-4 sm:right-6 md:right-8 top-1/2 flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+              <button onClick={() => setShowNav(prev => !prev)}>
+                <PiArrowBendUpRightLight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
+              </button>
             </div>
 
             {showNav && (
@@ -55,11 +54,7 @@ const Banner = () => {
                     <NavLink
                       to={path}
                       className={({ isActive, isPending }) =>
-                        isActive
-                          ? "font-bold underline"
-                          : isPending
-                          ? "opacity-50"
-                          : ""
+                        isActive ? "font-bold underline" : isPending ? "opacity-50" : ""
                       }
                     >
                       {link}
@@ -69,7 +64,7 @@ const Banner = () => {
               </ul>
             )}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <section className="container mx-auto mb-7">
