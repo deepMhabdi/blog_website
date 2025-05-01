@@ -24,7 +24,7 @@ const Navbar = () => {
       <nav className="px-4 py-4 max-w-7xl mx-auto flex justify-between items-center">
 
         <motion.a 
-        variants={fadeIn("down", 0.2)}
+        variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
@@ -34,7 +34,14 @@ const Navbar = () => {
         </motion.a>
 
         
-        <ul className="hidden md:flex gap-8 text-lg font-medium">
+        
+        <motion.ul 
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"  
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+
+        className="hidden md:flex gap-8 text-lg font-medium">
           {navItems.map(({ path, link }) => (
             <li key={path}>
               <NavLink
@@ -47,7 +54,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
-        </ul>
+        </motion.ul>
 
         {/* Social icons */}
         <motion.div 
@@ -75,27 +82,35 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <ul
-        className={`md:hidden gap-4 text-lg font-medium px-6 py-4 bg-white z-50 ${
-          isMenuOpen
-            ? "fixed top-0 left-0 w-full transition-all duration-200"
-            : "hidden"
-        }`}
-      >
-        {navItems.map(({ path, link }) => (
-          <li key={path}>
-            <NavLink
-              to={path}
-              onClick={toggleMenu}
-              className={({ isActive }) =>
-                isActive ? "text-orange-500" : "hover:text-orange-500"
-              }
-            >
-              {link}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+      {/* Mobile Menu */}
+{isMenuOpen && (
+  <div className="md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 transition-all duration-300 px-6 py-4">
+    {/* Cross icon inside menu */}
+    <div className="flex justify-end">
+      <button onClick={toggleMenu} className="text-black">
+        <FaXmark className="w-6 h-6" />
+      </button>
+    </div>
+
+    {/* Navigation items */}
+    <ul className="mt-6 space-y-6 text-lg font-medium">
+      {navItems.map(({ path, link }) => (
+        <li key={path}>
+          <NavLink
+            to={path}
+            onClick={toggleMenu}
+            className={({ isActive }) =>
+              isActive ? "text-orange-500" : "hover:text-orange-500"
+            }
+          >
+            {link}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
     </header>
   );
 };

@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import ContactUs from "./ContactUs";
+import TeamSection from "./TeamSection";
+import Footer from "./Footer";
 
 const Banner = () => {
   const [showNav, setShowNav] = useState(false);
@@ -46,12 +48,6 @@ const Banner = () => {
               </p>
             </div>
 
-            <div className="absolute right-4 sm:right-6 md:right-8 top-1/2 flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-              <button onClick={() => setShowNav((prev) => !prev)}>
-                <PiArrowBendUpRightLight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
-              </button>
-            </div>
-
             {showNav && (
               <ul className="absolute top-full right-4 bg-white/90 p-4 rounded-md shadow-md mt-2 z-10 text-black">
                 {navItems.map(({ path, link }) => (
@@ -89,7 +85,9 @@ const Banner = () => {
       </section>
 
       <BlogCards />
+      <TeamSection />
       <ContactUs />
+
     </>
   );
 };
