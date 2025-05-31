@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import image11 from "../assets/image11.jpg";
-import video10 from "../assets/video10.mp4";
-import image1 from "../assets/image1.jpg";
+
+
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { motion } from "framer-motion";

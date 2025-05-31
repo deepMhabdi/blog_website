@@ -23,7 +23,7 @@ const BlogCards = () => {
               <img
                 src={blog.image}
                 alt=""
-                className="h-100 w-full rounded-t-2xl object-cover"
+                className="h-100 w-full object-cover"
               />
             </div>
             <h3
