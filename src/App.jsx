@@ -6,6 +6,7 @@ import ContactUs from "./components/ContactUs";
 import LandingPage from "./components/LandingPage";
 import BlogCards from "./components/BlogCards";
 import BlogDetails from "./components/BlogDetails";
+import FAQSection from "./components/FAQSection";
 
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
         <Route path="/blogs" element={<BlogCards />} />
         <Route path="/blogs/:blogTitle" element={<BlogDetails />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/articles" element={<BlogCards />} />
+        <Route path="/faq" element={<FAQSection />} />
       </Routes>
       <Footer />
     </div>

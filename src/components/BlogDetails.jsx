@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import nature from "../assets/nature.jpg";
-import banner from "../assets/banner.jpeg";
+import fertility from "../assets/fertility.jpg";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const blogTitles = [
@@ -14,7 +14,6 @@ const blogTitles = [
 
 const blogContent = {
   "Essential Vitamins To Improve Male Fertility": {
-    image: nature,
     content: `Fertility concerns are evolving at a faster rate. On a rough scale, one in five couples is facing infertility due to various reasons that can be solved with lifestyle modifications. On an average scale, an equal percentage is contributed by both genders incapable of conceiving. Infertility is termed as failure to develop after a full year of unprotected intercourse. Couples at this point need professional assistance, and crucial support from a doctor is highly required to improve the chance of conception.
 
 The following are the possible causes of male infertility:
@@ -36,7 +35,6 @@ Vitamin C and E are essential antioxidants protecting cellular damage during oxi
   },
 
   "A Comprehensive Guide Into Men’s Sexual Health": {
-    image: nature,
     content: `Sexual health, just like rest of the aspects of health need proper care. While most of the people around the globe are unaware of the strategies and tips that need to be followed in order to prevent from an unhealthy sexual life.
 Here is the guide to the basic measures and strategies important to take care of sexual health for men.
 Let’s dive into the ideas to keep it healthy for you.
@@ -52,7 +50,6 @@ Early ejaculation can negatively affect  person’s sense of self and the pleasu
   },
 
   "Discover The Ultimate Secret To Staying Fit In Your 40s!": {
-    image: nature,
     content: `Did you know that staying fit in your 40s is not only possible but can also be a lot of fun? Many think that once they hit middle age, staying active and healthy becomes an uphill battle. But the truth is, it’s never too late to start prioritizing your well-being and making positive changes in your lifestyle. In this blog post, we will delve into the secrets of staying fit in your 40s and beyond. So, let’s dive right in!
 
 Embrace the Power of Regular Exercise:
@@ -72,7 +69,6 @@ Focus on incorporating plenty of fruits, vegetables, lean proteins, whole grains
   },
 
   "A Guide To The Dietary Needs Of Men": {
-    image: nature,
     content: `Dietary needs are the requirements that are needed in one’s diet which reflect on the physical and mental wellness. Dietary needs vary according to different conditions which include gender, location, and weight etc. Moving on, dietary requirements can vary in genders due to many reasons and few of them are due to differences in physiology, hormonal profiles and nutritional needs. 
 Men generally have a higher lean body mass and basal metabolic rate in comparison to women which makes their dietary requirements different than women. In order to support their fitness and well-being. There are some principles that revolve around the health and wellness of men which apply to the specific dietary needs that men need in their daily lives. These principles can help optimize energy levels, promote muscle growth and enhance the overall vitality.
 
@@ -90,7 +86,6 @@ Men have certain dietary demands that should be recognized and taken care of in 
   },
 
   "Discover The Secret To Aging Gracefully!": {
-    image: nature,
     content: `As the years go by, it’s only natural for us to wonder how we can age gracefully and maintain our youthful vigor. We see celebrities and influencers who seem to defy the hands of time, leaving us in awe of their healthy bodies and radiant skin. But what is their secret? Is it some magical potion or expensive treatment? Or is there something we can all do to age gracefully, regardless of our bank account? In this article, we will explore the secret to aging gracefully and how you can incorporate it into your everyday life.
 
 The Power of a Healthy Lifestyle:
@@ -189,14 +184,14 @@ const BlogDetails = () => {
           {decodeURIComponent(blogTitle)}
         </h1>
 
-        {/* Blog Image */}
+        {/* Blog Image
         <div className="w-full md:w-3/4 h-[240px] md:h-[400px] bg-white shadow-xl rounded-3xl overflow-hidden mb-8 border border-gray-200 transition-transform hover:scale-[1.01] duration-200">
           <img
-            src={blog?.image}
+            src={blog?.fertility || blog?.image || nature}
             alt={blogTitle}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
-        </div>
+        </div> */}
 
         {/* Blog Content */}
         <div className="w-full md:w-3/4 bg-white shadow-lg rounded-3xl p-6 md:p-8 leading-relaxed text-gray-700 text-[16px] whitespace-pre-line border border-gray-100">
