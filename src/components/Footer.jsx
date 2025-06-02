@@ -72,7 +72,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/blogs"
                   className="hover:text-green-600 transition-colors duration-300"
                 >
                   Blogs
@@ -80,7 +80,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/contact-us"
                   className="hover:text-green-600 transition-colors duration-300"
                 >
                   Contact Us

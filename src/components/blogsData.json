@@ -70,5 +70,65 @@
     "reading_time": "8 minutes",
     "content": "Blackbird Labs, a hospitality tech company whose platform helps restaurants stay in touch with guests and incentivize them to dine out more frequently, today announced that it raised $24 million in...",
     "tags": ["Startups", "Writing"]
+  },
+  {
+    "id": 11,
+    "title": "Top 7 Habits To Boost Men’s Mental Health",
+    "image": "https://www.thriveagency.uk/app/uploads/2020/09/healthy-habits-mental-health-1.jpg",
+    "category": "Health",
+    "author": "Jordan Crook",
+    "authorPic": "author2.jpg",
+    "published_date": "October 10, 2023",
+    "reading_time": "7 minutes",
+    "content": "With mental health becoming a growing concern, it's essential for men to adopt daily practices that foster emotional well-being. From meditation to regular physical activity, discover practical habits that make a difference.",
+    "tags": ["Mental Health", "Lifestyle"]
+  },
+  {
+    "id": 12,
+    "title": "AI and Healthcare: Transforming Men's Wellness",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-ai-healthcare-illustration_52683-156475.jpg",
+    "category": "AI",
+    "author": "Rebecca Bellan",
+    "authorPic": "author3.jpg",
+    "published_date": "October 8, 2023",
+    "reading_time": "6 minutes",
+    "content": "AI is playing a crucial role in personalizing health treatment for men. From early diagnosis to lifestyle tracking, here's how artificial intelligence is revolutionizing the healthcare sector.",
+    "tags": ["AI", "HealthTech"]
+  },
+  {
+    "id": 13,
+    "title": "Budget-Friendly Nutrition Plans For Men",
+    "image": "https://png.pngtree.com/png-clipart/20231005/original/pngtree-cartoon-nutritionist-with-diet-plan-and-healthy-food-vector-png-image_12963438.png",
+    "category": "Health",
+    "author": "Brian Heater",
+    "authorPic": "author4.jpg",
+    "published_date": "October 6, 2023",
+    "reading_time": "5 minutes",
+    "content": "Eating healthy doesn’t have to be expensive. This guide breaks down affordable and balanced diet options to keep your energy high and body in top shape.",
+    "tags": ["Health", "Nutrition"]
+  },
+  {
+    "id": 14,
+    "title": "How Startups Are Innovating Men's Fitness Gear",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYbKQKfBmJAooxleTRSMrrq8B_pCaDc1ir-QkeMMvS-yG6SZCoQNYu34ufho1qBUAoAlI&usqp=CAU",
+    "category": "Startups",
+    "author": "Annie Siebert",
+    "authorPic": "author5.jpg",
+    "published_date": "October 7, 2023",
+    "reading_time": "6 minutes",
+    "content": "From smart wearable tech to AI-integrated gym equipment, fitness startups are creating a new era of men's wellness gear. Here's a closer look at the latest innovations.",
+    "tags": ["Startups", "Fitness"]
+  },
+  {
+    "id": 15,
+    "title": "Mastering Work-Life Balance: Tips For Modern Men",
+    "image": "https://img.freepik.com/free-vector/flat-business-people-meditating_23-2148919174.jpg?semt=ais_hybrid&w=740",
+    "category": "Lifestyle",
+    "author": "Amanda Silberling",
+    "authorPic": "author6.jpg",
+    "published_date": "October 5, 2023",
+    "reading_time": "7 minutes",
+    "content": "Struggling to juggle your career, family, and personal life? These proven strategies help men establish healthy boundaries and achieve true balance.",
+    "tags": ["Productivity", "Lifestyle"]
   }
 ]

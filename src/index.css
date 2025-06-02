@@ -4,3 +4,18 @@
 @theme {
     --font-family: "Oswald", sans-serif;
 }
+
+@keyframes slide-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-slide-vertical {
+  animation-name: slide-vertical;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

@@ -1,106 +1,90 @@
 import React from "react";
-import Swal from "sweetalert2";
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import Footer from "./Footer";
 
-const ContactUs = () => {
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "49ab5496-8884-4e2f-891b-0bb4468f6259");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      Swal.fire({
-        title: "Success",
-        text: "Message sent successfully",
-        icon: "success",
-      });
-    }
-  };
-
+const ContactSection = () => {
   return (
-    <>
-      <section className="py-12 px-6 mt-30 bg-gray-100">
-        <motion.div
-          variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
-          <div className="flex flex-col md:flex-row bg-white shadow-md rounded-lg overflow-hidden">
-            <div className="md:w-1/2 p-8">
-              <h3 className="text-xl font-semibold mb-4 text-center">
-                Get in Touch
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Fill the form and we will get back to you soon!
-              </p>
-              <form className="flex flex-col gap-4" onSubmit={onSubmit}>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="border p-2 rounded"
-                  name="name"
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="border p-2 rounded"
-                  name="email"
-                  required
-                />
-                <textarea
-                  placeholder="Message"
-                  rows="4"
-                  className="border p-2 rounded resize-none"
-                  name="message"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="bg-gray-900 text-white py-2 rounded hover:bg-gray-700 transition"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-            <div className="md:w-1/2 bg-gray-200 p-8 flex flex-col justify-center text-center">
-              <h1></h1>
-              <p className="text-gray-700 mb-2">
-                <strong>Address:</strong> 1234 Street Name, City, State
-              </p>
-              <p className="text-gray-700 mb-2">
-                <strong>Email:</strong> info@example.com
-              </p>
-              <p className="text-gray-700">
-                <strong>Phone:</strong> +91 9876543210
-              </p>
-            </div>
+    <div className="bg-[#191c1e] text-white flex flex-col md:flex-row items-center justify-start px-6 md:px-10 py-10 mx-4 md:mx-15 mt-20">
+      {/* Left Side */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="md:w-1/2 w-full mb-10 md:mb-0 md:pr-12 px-10 py-10"
+      >
+        <h2 className="text-4xl font-bold mb-4 px-6 md:px-12">Let's talk</h2>
+        <p className="text-lg mb-6 px-6 md:px-12">
+          Is there a challenge your organization or company needs help solving?
+          We'd love to discuss it.
+        </p>
+        <div className="flex items-center space-x-4 px-6 md:px-12">
+          <img
+            src="/src/assets/person.jpg"
+            alt="Andrew Terehin"
+            className="w-16 h-16 rounded-full object-cover"
+          />
+          <div>
+            <p className="text-sm text-gray-400">Managing Director, Partner</p>
+            <p className="text-lg font-semibold">Andrew Terehin</p>
           </div>
-        </motion.div>
-      </section>
+        </div>
+      </motion.div>
 
-    </>
-    
+      {/* Right Side - Form */}
+      <motion.form
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="md:w-1/2 w-full space-y-4 px-6 md:px-12"
+      >
+        <div className="flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
+            placeholder="Name*"
+            className="bg-transparent border-b border-gray-600 outline-none py-2 w-full"
+          />
+          <input
+            type="text"
+            placeholder="Your Website or Blog URL"
+            className="bg-transparent border-b border-gray-600 outline-none py-2 w-full"
+          />
+        </div>
+        <div className="flex flex-col md:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="E-mail*"
+            className="bg-transparent border-b border-gray-600 outline-none py-2 w-full"
+          />
+          <input
+            type="text"
+            placeholder="Topic of Interestet"
+            className="bg-transparent border-b border-gray-600 outline-none py-2 w-full"
+          />
+        </div>
+        <textarea
+          placeholder="Tell us something about your project"
+          className="bg-transparent border-b border-gray-600 outline-none py-2 w-full h-24 resize-none"
+        />
+
+        <div className="flex items-center gap-4">
+          <label className="flex items-center gap-2 text-sm text-gray-400">
+            <input type="checkbox" className="accent-blue-500" /> I accept your{" "}
+            <a href="#" className="underline text-white">
+              Privacy Policy
+            </a>
+          </label>
+        </div>
+
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          type="submit"
+          className="bg-blue-400 text-white font-medium px-6 py-2 rounded-full mt-4"
+        >
+          Send
+        </motion.button>
+      </motion.form>
+    </div>
   );
 };
 
-export default ContactUs;
+export default ContactSection;

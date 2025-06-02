@@ -37,7 +37,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-[#fdfaf6] py-10 px-4 md:px-10 min-h-screen flex items-center justify-center -mb-30">
+    <section className="bg-[#fdfaf6] py-10 px-4 md:px-10 min-h-screen flex items-center justify-center -mt-20">
       <div className="bg-white rounded-lg shadow-md p-6 md:p-10 max-w-3xl w-full">
         <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-800 mb-6">
           Frequently Asked Questions

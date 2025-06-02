@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import ContactUs from "./ContactUs";
 import FAQSection from "./FAQSection";
+import Author from "./Author";
 
 const Banner = () => {
   const [showNav, setShowNav] = useState(false);
@@ -15,7 +16,7 @@ const Banner = () => {
 
   return (
     <>
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-7 mb-16 py-6 sm:py-6 md:py-8 lg:py-1">
+      <section className="px-6 md:px-10 py-10 mx-4 md:mx-15 -mt-10 mb-20">
         <div className="overflow-hidden rounded-3xl">
           <div className="relative">
             <img
@@ -41,7 +42,6 @@ const Banner = () => {
               </p>
             </div>
 
-
             {showNav && (
               <ul className="absolute top-full right-4 bg-white/90 p-4 rounded-md shadow-md mt-2 z-10 text-black">
                 {navItems.map(({ path, link }) => (
@@ -65,7 +65,7 @@ const Banner = () => {
           </div>
         </div>
       </section>
-
+      <Author />
       <section className="container mx-auto mb-7">
         <motion.h2
           variants={fadeIn("down", 0.2)}
@@ -85,8 +85,8 @@ const Banner = () => {
       </section>
 
       <BlogCards />
+
       <ContactUs />
-      <FAQSection />  
     </>
   );
 };
