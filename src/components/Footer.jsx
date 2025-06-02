@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
 const Footer = () => {
@@ -13,9 +13,9 @@ const Footer = () => {
       className="px-4 md:px-8 lg:px-16 mt-30"
     >
       <footer className="bg-gray-300 text-gray-800 py-12 rounded-t-xl shadow-md">
-        <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:max-w-5xl">
+        <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:max-w-5xl text-left md:text-center items-start md:items-center">
           {/* About Section */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start md:items-center">
             <h3 className="text-2xl font-semibold mb-4">ABOUT</h3>
             <p className="mb-6">
               Welcome to Blogger, where we share tips, ideas, and inspiration on
@@ -51,12 +51,12 @@ const Footer = () => {
           </div>
 
           {/* Explore Section */}
-          <div className="flex flex-col items-start pl-16">
-            <h3 className="text-2xl font-semibold mb-4">EXPLORE</h3>
+          <div className="flex flex-col items-start md:items-center">
+            <h3 className="text-2xl font-semibold mb-4 ">EXPLORE</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-green-600 transition-colors duration-300"
                 >
                   Home
@@ -89,7 +89,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col items-start pl-8">
+          {/* Contact Us */}
+          <div className="flex flex-col items-start md:items-center">
             <h3 className="text-2xl font-semibold mb-4">CONTACT</h3>
             <p>Miraj Pandharpur road, Bhose</p>
             <p>Taluka : Miraj, District : Sangli</p>
@@ -120,7 +121,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-400 mt-8 pt-6 text-center text-sm text-gray-600">
+        <div className="border-t border-gray-400 mt-8 pt-8 text-center text-sm text-gray-600">
           © Copyright 2025 All Rights Reserved, Blogger
         </div>
       </footer>
