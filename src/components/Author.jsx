@@ -21,7 +21,7 @@ const authors = [
 
 const BestAuthors = () => {
   return (
-    <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-12 bg-[#f5efda]">
+    <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-12 bg-[#f5efda] -mt-20 mb-20">
       <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">Best Authors</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {authors.map((author, index) => (
