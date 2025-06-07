@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../assets/banner.jpeg";
+import image from "../assets/banner.jpg";
 import { PiArrowBendUpRightLight } from "react-icons/pi";
 import BlogCards from "./BlogCards";
 import { NavLink } from "react-router-dom";
