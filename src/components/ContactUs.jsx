@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ContactSection = () => {
   return (
-    <div className="bg-[#191c1e] text-white flex flex-col md:flex-row items-center justify-start px-6 md:px-10 py-10 mx-4 md:mx-15 mt-20">
+    <div className="bg-[#191c1e] text-white flex flex-col md:flex-row items-center justify-start px-6 md:px-10 py-10 mx-4 md:mx-15 m-10 rounded-2xl ">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}

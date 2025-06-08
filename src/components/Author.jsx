@@ -27,7 +27,7 @@ const BestAuthors = () => {
         {authors.map((author, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-xl p-6 flex flex-col md:flex-row items-start gap-6 transition-transform hover:scale-[1.02]"
+            className="bg-white hover:shadow-2xl rounded-xl p-6 flex flex-col md:flex-row border-2 items-start gap-6 transition-transform hover:scale-[1.02]"
           >
             <img
               src={author.img}

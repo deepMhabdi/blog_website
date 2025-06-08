@@ -13,18 +13,18 @@ const BlogCards = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 mt-20 justify-evenly items-center gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-10 mt-20 justify-evenly items-center gap-10">
         {Blogs.map((blog) => (
           <div
             key={blog.id}
-            className="p-3 cursor-pointer rounded-xl max-w-sm w-full mx-auto hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+            className="p-3 cursor-pointer rounded-xl max-w-sm w-full mx-auto hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-2xl bg-white border-2"
             onClick={() => handleClick(blog.title)} 
           >
             <div>
               <img
                 src={blog.image}
                 alt=""
-                className="h-100 w-full object-cover rounded-2xl"
+                className="h-100 w-full object-cover border-2 rounded-2xl"
               />
             </div>
             <h3

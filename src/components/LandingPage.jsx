@@ -16,13 +16,13 @@ const Banner = () => {
 
   return (
     <>
-      <section className="px-6 md:px-10 py-10 mx-4 md:mx-15 -mt-10 mb-20">
+      <section className="px-6 md:px-10 py-10 mx-4 md:mx-15 -mt-10 mb-20 ">
         <div className="overflow-hidden rounded-3xl">
           <div className="relative">
             <img
-              src={image}
+              src="https://i.pinimg.com/736x/f5/ba/23/f5ba23404cbd98ac806b1d0228a2830e.jpg"
               alt="Featured blog post"
-              className="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[675px] w-full object-cover"
+              className="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[675px] w-full object-cover rounded-3xl border-4"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8 lg:p-10 text-white">

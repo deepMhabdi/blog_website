@@ -10,9 +10,9 @@ const Footer = () => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: true, amount: 0.3 }}
-      className="px-4 md:px-8 lg:px-16 mt-30"
+      className="px-4 md:px-8 lg:px-16 mt-10"
     >
-      <footer className="bg-gray-300 text-gray-800 py-12 rounded-t-xl shadow-md">
+      <footer className="bg-gray-300 text-gray-800 py-12 rounded-t-xl shadow-md border-2">
         <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:max-w-5xl text-left md:text-center items-start md:items-center">
           {/* About Section */}
           <div className="flex flex-col items-start md:items-center">

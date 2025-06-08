@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-[#f5efda] text-black top-0 right-0 left-0">
+    <header className="bg-[#f5efda] text-black top-0 right-0 left-0 py-4">
       <nav className="px-4 py-4 max-w-7xl mx-auto flex justify-between items-center">
         <motion.a
           variants={fadeIn("right", 0.2)}
@@ -27,7 +27,7 @@ const Navbar = () => {
           whileInView={"show"}
           viewport={{ once: true, amount: 0.3 }}
           href="/"
-          className="text-3xl font-bold text-black"
+          className="text-4xl font-bold text-black"
         >
           Blog<span className="text-orange-400">ger</span>
         </motion.a>
@@ -37,7 +37,7 @@ const Navbar = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.3 }}
-          className="hidden md:flex gap-8 text-lg font-medium"
+          className="hidden md:flex gap-8 text-2xl font-medium"
         >
           {navItems.map(({ path, link }) => (
             <li key={path}>
@@ -59,7 +59,7 @@ const Navbar = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-black lg:flex gap-4 items-center hidden"
+          className="text-black lg:flex gap-4 items-center hidden "
         >
           <a href="/">
             <FaFacebook />
